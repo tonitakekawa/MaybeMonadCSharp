@@ -15,6 +15,9 @@ namespace MaybeMonad
 
         Program()
         {
+            //
+            // NULLチェックをする項目がいっぱいあるときの例
+            //
             var a = from x in "1".ParseInt()
                     from y in "2".ParseInt()
                     from z in "3".ParseInt()
@@ -30,6 +33,7 @@ namespace MaybeMonad
 
             Console.WriteLine(a.Value);
         }
+
     }
 
     static class StringEx
@@ -45,5 +49,6 @@ namespace MaybeMonad
             return Option<int>.None();
         }
     }
+
 }
 
